@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Delanchy — Outils Quai</title>
+<title>Delanchy â€” Outils Quai</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/xlsx-js-style@1.2.0/dist/xlsx.bundle.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
@@ -319,8 +318,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
 <body>
 
 <div class="app-tabs-bar">
-  <button class="app-tab-btn active" data-app="raq" onclick="switchApp('raq')">?? Reste à Quai</button>
-  <button class="app-tab-btn" data-app="dashboard" onclick="switchApp('dashboard')">?? Récap Tournées</button>
+  <button class="app-tab-btn active" data-app="raq" onclick="switchApp('raq')">?? Reste Ã  Quai</button>
+  <button class="app-tab-btn" data-app="dashboard" onclick="switchApp('dashboard')">?? RÃ©cap TournÃ©es</button>
   
   <!-- Ajout du lien vers ton scanner Cloudflare -->
   <a href="https://delanchy-suivi-quai.pessialaura.workers.dev/" target="_blank" class="app-tab-btn" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; background-color: transparent; color: inherit; cursor: pointer;">
@@ -328,7 +327,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
   </a>
 </div>
 <a href="https://docs.google.com/spreadsheets/d/1QPSblJ_WSFSU8uU27-9SIgWnd75HPQQXFSV2BoNMLiI/edit?gid=0#gid=0" target="_blank" class="app-tab-btn" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; background-color: transparent; color: inherit; cursor: pointer;">
-    ?? Ouvrir Reste à quai
+    ?? Ouvrir Reste Ã  quai
   </a>
   <a href="https://docs.google.com/spreadsheets/d/1pwTCtFlTToj_qVIL6CdI-pWME_LeAqyUGdwcB_bYBWI/edit?gid=609620987#gid=609620987" target="_blank" class="app-tab-btn" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; background-color: transparent; color: inherit; cursor: pointer;">
     ?? Ouvrir Palette Data
@@ -339,7 +338,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
   
   <div class="header-container">
     <div class="header-text"> 
-      <h1>Fiche RESTE À QUAI</h1>        
+      <h1>Fiche RESTE Ã€ QUAI</h1>        
     </div>    
     <div class="header-logo">      
       <img src="https://www.minderouen.fr/wp-content/uploads/2016/12/logo-Delanchy.jpg" alt="Logo Delanchy">
@@ -348,9 +347,9 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
 
   <div class="top-row">    
     <div class="field-col">      
-      <div class="field-label">Tournée</div>      
+      <div class="field-label">TournÃ©e</div>      
       <select id="tournee" onchange="gererAffichageTournee(this)">        
-        <option value="">- Sélectionner -</option>        
+        <option value="">- SÃ©lectionner -</option>        
         <option>69D1</option>        
         <option>69D4</option>        
         <option>69D5</option>        
@@ -358,15 +357,15 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
         <option>69D8</option>        
         <option>69JD</option>        
         <option>HALL</option>        
-        <option>Dévoyé</option>
-        <option>Reste à quai</option>         
+        <option>DÃ©voyÃ©</option>
+        <option>Reste Ã  quai</option>         
         <option>Autre</option>      
       </select>
 
-      <!-- Zone de commentaire cachée par défaut -->
+      <!-- Zone de commentaire cachÃ©e par dÃ©faut -->
       <div class="champ-commentaire" id="tournee-autre-wrap" style="display: none; margin-top: 8px;">
-        <div class="field-label" style="font-size: 0.9em;">Précisez le motif :</div>
-        <input type="text" placeholder="Précisez..." style="width:100%;" id="tournee-autre" />
+        <div class="field-label" style="font-size: 0.9em;">PrÃ©cisez le motif :</div>
+        <input type="text" placeholder="PrÃ©cisez..." style="width:100%;" id="tournee-autre" />
       </div>
     </div>    
     <div class="field-col">      
@@ -394,10 +393,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
 <div id="app-dashboard" class="app-view">
 <header>
   <div>
-    <h1>Delanchy — Récap des tournées de chargement</h1>
-    <p>Corbas (69) — mis à jour à partir du PDF w2plancharg_dly</p>
+    <h1>Delanchy â€” RÃ©cap des tournÃ©es de chargement</h1>
+    <p>Corbas (69) â€” mis Ã  jour Ã  partir du PDF w2plancharg_dly</p>
   </div>
-  <div id="dateBadge">Aucun fichier chargé</div>
+  <div id="dateBadge">Aucun fichier chargÃ©</div>
 </header>
 
 <div class="drop-zone" id="dropZone">
@@ -405,7 +404,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
     <div class="drop-icon">??</div>
     <div>
       <strong>Glissez votre PDF ici (w2plancharg_dly.pdf)</strong>
-      <p>Ou cliquez pour parcourir — les données du jour remplacent celles affichées.</p>
+      <p>Ou cliquez pour parcourir â€” les donnÃ©es du jour remplacent celles affichÃ©es.</p>
       <div class="status-line" id="statusLine"><span class="pill wait">En attente d'un fichier</span></div>
     </div>
   </div>
@@ -415,13 +414,13 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
       <input type="file" id="pdfInput" accept="application/pdf">
     </div>
     <button class="btn btn-print" id="printBtn" disabled>??? Imprimer la Checklist</button>
-    <button class="btn btn-export" id="exportBtn" disabled>?? Export Excel — Planning</button>
-    <button class="btn btn-labels" id="labelsBtn" disabled>??? Générer les étiquettes QR</button>
+    <button class="btn btn-export" id="exportBtn" disabled>?? Export Excel â€” Planning</button>
+    <button class="btn btn-labels" id="labelsBtn" disabled>??? GÃ©nÃ©rer les Ã©tiquettes QR</button>
   </div>
 </div>
 
 <div class="kpis">
-  <div class="kpi"><div class="label">Tournées</div><div class="value" id="kpiTournees">0</div></div>
+  <div class="kpi"><div class="label">TournÃ©es</div><div class="value" id="kpiTournees">0</div></div>
   <div class="kpi"><div class="label">Destinataires</div><div class="value" id="kpiDest">0</div></div>
   <div class="kpi"><div class="label">Total colis</div><div class="value" id="kpiColis">0</div></div>
   <div class="kpi"><div class="label">Total poids (kg)</div><div class="value" id="kpiPoids">0</div></div>
@@ -430,17 +429,17 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
 
 <div class="controls">
   <div class="search">
-    <input type="text" id="searchInput" placeholder="?? Rechercher une tournée, un chauffeur, un destinataire...">
+    <input type="text" id="searchInput" placeholder="?? Rechercher une tournÃ©e, un chauffeur, un destinataire...">
   </div>
   <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
-    <button class="btn btn-outline" id="toggleAllBtn">?? Tout déplier</button>
+    <button class="btn btn-outline" id="toggleAllBtn">?? Tout dÃ©plier</button>
     <div class="sort">
       <select id="sortSelect">
-        <option value="code">Code tournée (alphanumérique)</option>
+        <option value="code">Code tournÃ©e (alphanumÃ©rique)</option>
         <option value="pdf">Ordre du PDF</option>
-        <option value="colis-desc">Colis (décroissant)</option>
-        <option value="poids-desc">Poids (décroissant)</option>
-        <option value="alpha">Alphabétique (libellé)</option>
+        <option value="colis-desc">Colis (dÃ©croissant)</option>
+        <option value="poids-desc">Poids (dÃ©croissant)</option>
+        <option value="alpha">AlphabÃ©tique (libellÃ©)</option>
       </select>
     </div>
     <div class="tabs">
@@ -453,13 +452,13 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
 
 <div class="grid" id="cardsView"></div>
 <div class="table-wrap" id="tableView" style="display:none;">
-  <div class="print-header-title" id="printHeaderTitle">Checklist Chargement Quai - Tournées Delanchy</div>
+  <div class="print-header-title" id="printHeaderTitle">Checklist Chargement Quai - TournÃ©es Delanchy</div>
   <table>
     <thead>
       <tr>
         <th style="width:35px; text-align:center;">?</th>
-        <th>Tournée</th><th>Libellé</th><th>Conducteur</th><th>Véhicule</th><th>Destinataire</th>
-        <th style="text-align:right;">Colis</th><th style="text-align:right;">Poids (kg)</th><th style="text-align:right; width:90px;">Pal. Réelles</th>
+        <th>TournÃ©e</th><th>LibellÃ©</th><th>Conducteur</th><th>VÃ©hicule</th><th>Destinataire</th>
+        <th style="text-align:right;">Colis</th><th style="text-align:right;">Poids (kg)</th><th style="text-align:right; width:90px;">Pal. RÃ©elles</th>
       </tr>
     </thead>
     <tbody id="tableBody"></tbody>
@@ -469,7 +468,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
   <div class="planning-grid" id="planningView"></div>
 </div>
 
-<footer>Outil hors-ligne — aucune donnée n'est envoyée sur internet, tout le traitement se fait dans le navigateur.</footer>
+<footer>Outil hors-ligne â€” aucune donnÃ©e n'est envoyÃ©e sur internet, tout le traitement se fait dans le navigateur.</footer>
 
 </div>
 
@@ -512,14 +511,14 @@ function addClient() {
   div.innerHTML = `    
     <div class="section-top">      
       <span class="section-title">Client ${count}</span>      
-      <button class="btn-remove" onclick="removeClient(${count})" aria-label="Supprimer">×</button>    
+      <button class="btn-remove" onclick="removeClient(${count})" aria-label="Supprimer">Ã—</button>    
     </div>        
     
     <div class="field-label">Fournisseur</div>
     <input type="text" placeholder="Ex : Nom du fournisseur" style="width:100%; margin-bottom:12px;" data-field="fournisseur" />
 
     <div class="field-label">Type de produit</div>    
-    <input type="text" placeholder="Ex : Frais, Surgelé, Sec, Marée..." style="width:100%; margin-bottom:12px;" data-field="type_produit" />
+    <input type="text" placeholder="Ex : Frais, SurgelÃ©, Sec, MarÃ©e..." style="width:100%; margin-bottom:12px;" data-field="type_produit" />
 
     <div class="field-label">Nom du client</div>    
     <input type="text" placeholder="Ex : Carrefour" style="width:100%; margin-bottom:12px;" data-field="client" />        
@@ -548,17 +547,17 @@ function addClient() {
       <div style="flex:1.2; min-width:0;">
         <div class="field-label">Motif / Statut</div>
         <select data-field="motif_statut" onchange="gererAffichageCommentaire(this)">
-          <option value="">- Sélectionner -</option>
+          <option value="">- SÃ©lectionner -</option>
           <option value="Mauvais aiguillage">Mauvais aiguillage</option>
-          <option value="Palette non prête">Palette non prête</option>
+          <option value="Palette non prÃªte">Palette non prÃªte</option>
           <option value="Second tour">Second tour</option>
           <option value="Autre">Autre</option>
         </select>
 
-        <!-- Zone de commentaire cachée par défaut -->
+        <!-- Zone de commentaire cachÃ©e par dÃ©faut -->
         <div class="champ-commentaire" style="display: none; margin-top: 8px;">
-          <div class="field-label" style="font-size: 0.9em;">Précisez le motif :</div>
-          <input type="text" placeholder="Précisez..." style="width:100%;" data-field="commentaire_motif" />
+          <div class="field-label" style="font-size: 0.9em;">PrÃ©cisez le motif :</div>
+          <input type="text" placeholder="PrÃ©cisez..." style="width:100%;" data-field="commentaire_motif" />
         </div>
       </div>
     </div>  
@@ -599,7 +598,7 @@ function getRows() {
     const motif = c.querySelector('[data-field="motif_statut"]').value;
     const commentaire = c.querySelector('[data-field="commentaire_motif"]').value.trim();
     
-    // Si "Autre" est sélectionné, on fusionne ou on renvoie le commentaire personnalisé
+    // Si "Autre" est sÃ©lectionnÃ©, on fusionne ou on renvoie le commentaire personnalisÃ©
     const motifFinal = (motif === 'Autre' && commentaire) ? `Autre : ${commentaire}` : motif;
 
     return {  
@@ -621,21 +620,21 @@ function valider() {
   const date = document.getElementById('date-field').value;  
   const rows = getRows();
 
-  if (!tourneeRaw) { alert('Merci de sélectionner une tournée.'); return; }  
+  if (!tourneeRaw) { alert('Merci de sÃ©lectionner une tournÃ©e.'); return; }  
   if (tourneeRaw === 'Autre' && !document.getElementById('tournee-autre').value.trim()) {
-    alert('Merci de préciser le motif de la tournée lorsque l\'option "Autre" est sélectionnée.');
+    alert('Merci de prÃ©ciser le motif de la tournÃ©e lorsque l\'option "Autre" est sÃ©lectionnÃ©e.');
     return;
   }
   if (!date) { alert('Merci de renseigner la date.'); return; }  
   if (rows.length === 0) { alert('Ajoutez au moins un client.'); return; }  
   
-  // Vérification de base des champs obligatoires
+  // VÃ©rification de base des champs obligatoires
   if (rows.some(r => !r.client || !r.fournisseur || !r.motif_statut || !r.type_produit)) { 
-    alert('Merci de compléter le Fournisseur, le Type de produit, le Client et le Motif pour chaque carte.'); 
+    alert('Merci de complÃ©ter le Fournisseur, le Type de produit, le Client et le Motif pour chaque carte.'); 
     return; 
   }
 
-  // Vérification spécifique si l'utilisateur a sélectionné "Autre" mais a laissé le champ vide
+  // VÃ©rification spÃ©cifique si l'utilisateur a sÃ©lectionnÃ© "Autre" mais a laissÃ© le champ vide
   const cartes = document.querySelectorAll('#clients-wrap .section-card');
   let erreurAutre = false;
   cartes.forEach(c => {
@@ -647,7 +646,7 @@ function valider() {
   });
 
   if (erreurAutre) {
-    alert('Merci de préciser le motif lorsque l\'option "Autre" est sélectionnée.');
+    alert('Merci de prÃ©ciser le motif lorsque l\'option "Autre" est sÃ©lectionnÃ©e.');
     return;
   }
 
@@ -655,7 +654,7 @@ function valider() {
   const totalColis = rows.reduce((s, r) => s + parseInt(r.colis || 0), 0);
   const dateF = new Date(date).toLocaleDateString('fr-FR');
 
-  let html = `<div class="badge" style="background:#F59E0B;">Envoi en cours...</div><h2>Récapitulatif — Tournée ${tournee}</h2>`;  
+  let html = `<div class="badge" style="background:#F59E0B;">Envoi en cours...</div><h2>RÃ©capitulatif â€” TournÃ©e ${tournee}</h2>`;  
   html += `<div class="recap-line">Date : <span>${dateF}</span></div>`;  
   rows.forEach(r => {    
     html += `<div class="recap-line" style="padding:6px 0; border-top: 1.5px dashed #334155; margin-top:6px;">
@@ -665,7 +664,7 @@ function valider() {
     </div>`;  
   });  
   html += `<div class="recap-line" style="margin-top:12px; font-size:14px; color:#F8FAFC;">
-    Total Tournée : <span style="color:#4ADE80; font-size:15px;">${totalPal} pal</span> &nbsp;|&nbsp; <span style="color:#38BDF8; font-size:15px;">${totalColis} colis</span>
+    Total TournÃ©e : <span style="color:#4ADE80; font-size:15px;">${totalPal} pal</span> &nbsp;|&nbsp; <span style="color:#38BDF8; font-size:15px;">${totalColis} colis</span>
   </div>`;
 
   const recap = document.getElementById('recap');  
@@ -680,7 +679,7 @@ function valider() {
       const badge = recap.querySelector('.badge');
       if (res.status === "success") {
         if (badge) {      
-          badge.textContent = "Enregistré dans le Sheets ?";      
+          badge.textContent = "EnregistrÃ© dans le Sheets ?";      
           badge.style.background = "#22C55E";      
         }
       } else {
@@ -688,13 +687,13 @@ function valider() {
           badge.textContent = "Erreur de transmission ?";
           badge.style.background = "#EF4444";
         }
-        alert("Erreur retournée par le script : " + res.message);
+        alert("Erreur retournÃ©e par le script : " + res.message);
       }
     })
     .withFailureHandler(function(err) {
       const badge = recap.querySelector('.badge');
       if (badge) {
-        badge.textContent = "Erreur réseau ?";
+        badge.textContent = "Erreur rÃ©seau ?";
         badge.style.background = "#EF4444";
       }
       alert("Erreur critique : " + err);
@@ -708,11 +707,11 @@ function exportCSV() {
   const rows = getRows();
 
   if (!tournee || !date || rows.length === 0) {    
-    alert('Complétez le formulaire avant d\'exporter.');    
+    alert('ComplÃ©tez le formulaire avant d\'exporter.');    
     return;  
   }
 
-  let csv = 'Date;Tournée;Fournisseur;Type Produit;Client;Ville;Nb Palettes;Nb Colis;Poids;Statut\n';  
+  let csv = 'Date;TournÃ©e;Fournisseur;Type Produit;Client;Ville;Nb Palettes;Nb Colis;Poids;Statut\n';  
   rows.forEach(r => {    
     csv += `${date};${tournee};${r.fournisseur};${r.type_produit};${r.client};${r.ville};${r.palettes};${r.colis};${r.poids};${r.motif_statut}\n`;  
   });
@@ -788,7 +787,7 @@ function parseLines(lines){
   const reTournee = /^Tournee\s*:\s*(\S+)\s*(.*)$/i;
   const reConducteur = /^Conducteur\s*:\s*(.*?)\s*Transporteur\s*:/i;
   const reTotalDest = /^TOTAL\s*:\s*(.+?)\s+Nb\s*pos(?:itions?)?\s*\((\d+)\)\s+(\d+)(?:\s+(\d+))?(?:\s+(\d+))?\s*$/i;
-  const reTotalTournee = /^Total\s+Tourn[ée]e?\s*:\s*(\S+)\s+Nb\s+positions?\s*:\s*(\d+)\s+(\d+)(?:\s+(\d+))?(?:\s+(\d+))?\s*$/i;
+  const reTotalTournee = /^Total\s+Tourn[Ã©e]e?\s*:\s*(\S+)\s+Nb\s+positions?\s*:\s*(\d+)\s+(\d+)(?:\s+(\d+))?(?:\s+(\d+))?\s*$/i;
   const reDossierDate = /Date\s*:\s*(\d{2}\/\d{2}\/\d{2})/;
 
   const reDirCode = /Dir\s*:\s*(\S+)/i;                                   
@@ -874,7 +873,7 @@ function parseLines(lines){
   });
   if(current) result.push(current);
 
-  result.forEach(t => { if(!t.conducteur) t.conducteur = 'Non affecté'; });
+  result.forEach(t => { if(!t.conducteur) t.conducteur = 'Non affectÃ©'; });
 
   return {tournees: result.filter(t => t.destinataires.length > 0), fileDate};
 }
@@ -926,7 +925,7 @@ function renderCards(list){
   const container = document.getElementById('cardsView');
   container.innerHTML = '';
   if(list.length === 0){
-    container.innerHTML = '<div class="empty">Aucune tournée ne correspond à la recherche.</div>';
+    container.innerHTML = '<div class="empty">Aucune tournÃ©e ne correspond Ã  la recherche.</div>';
     return;
   }
   list.forEach(t => {
@@ -945,7 +944,7 @@ function renderCards(list){
       </div>
       <div class="card-driver">
         <span>?? ${t.conducteur}</span>
-        <span class="veh-field">?? <input type="text" class="veh-input" placeholder="N° véhicule" value="${escapeAttr(getVehicule(t.code))}"></span>
+        <span class="veh-field">?? <input type="text" class="veh-input" placeholder="NÂ° vÃ©hicule" value="${escapeAttr(getVehicule(t.code))}"></span>
         <span>${t.destinataires.length} destinataire(s)</span>
       </div>
       <div class="card-totals">
@@ -961,7 +960,7 @@ function renderCards(list){
               <input type="checkbox" data-code="${t.code}" data-index="${dIdx}" ${d.checked ? 'checked' : ''}>
               <span class="dest-name" title="${escapeAttr(d.nom)}">${d.nom}</span>
             </div>
-            <span class="dest-nums">${d.colis} col. · ${d.poids} kg ${d.realPalettes !== '' ? '· ' + d.realPalettes + ' pal.' : ''}</span>
+            <span class="dest-nums">${d.colis} col. Â· ${d.poids} kg ${d.realPalettes !== '' ? 'Â· ' + d.realPalettes + ' pal.' : ''}</span>
           </div>
         `).join('')}
       </div>` : ''}
@@ -1009,7 +1008,7 @@ function renderTable(list){
   const rows = [];
   list.forEach(t => t.destinataires.forEach((d, dIdx) => rows.push({t, d, dIdx})));
   if(rows.length === 0){
-    tbody.innerHTML = '<tr><td colspan="9" class="empty">Aucune donnée à afficher.</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="9" class="empty">Aucune donnÃ©e Ã  afficher.</td></tr>';
     return;
   }
   rows.forEach(({t, d, dIdx}) => {
@@ -1019,7 +1018,7 @@ function renderTable(list){
       <td><span class="badge">${t.code}</span></td>
       <td>${t.libelle}</td>
       <td>${t.conducteur}</td>
-      <td>${getVehicule(t.code) || '—'}</td>
+      <td>${getVehicule(t.code) || 'â€”'}</td>
       <td>${d.nom}</td>
       <td class="num">${d.colis.toLocaleString('fr-FR')}</td>
       <td class="num">${d.poids.toLocaleString('fr-FR')}</td>
@@ -1046,9 +1045,9 @@ function renderTable(list){
 function renderPlanning(list){
   const container = document.getElementById('planningView');
   container.innerHTML = '';
-  const withDriver = list.filter(t => t.conducteur && t.conducteur !== 'Non affecté');
+  const withDriver = list.filter(t => t.conducteur && t.conducteur !== 'Non affectÃ©');
   if(withDriver.length === 0){
-    container.innerHTML = '<div class="empty">Aucune tournée avec chauffeur affecté à afficher.</div>';
+    container.innerHTML = '<div class="empty">Aucune tournÃ©e avec chauffeur affectÃ© Ã  afficher.</div>';
     return;
   }
   withDriver.forEach(t => {
@@ -1063,7 +1062,7 @@ function renderPlanning(list){
       <div class="plan-list">
         ${t.destinataires.length
           ? t.destinataires.map(d => `<div class="plan-row ${d.checked ? 'checked' : ''}" style="${d.checked ? 'opacity:0.45; text-decoration:line-through;' : ''}">${d.nom} <span style="font-weight:normal; opacity:0.8;">(${d.colis}c - ${d.poids}kg)</span></div>`).join('')
-          : '<div class="plan-empty-row">—</div>'}
+          : '<div class="plan-empty-row">â€”</div>'}
       </div>
     `;
     container.appendChild(box);
@@ -1084,7 +1083,7 @@ function refresh(){
 async function exportExcel(){
   if(tournees.length === 0) return;
 
-  const sorted = applySort(tournees, 'code').filter(t => t.conducteur && t.conducteur !== 'Non affecté');
+  const sorted = applySort(tournees, 'code').filter(t => t.conducteur && t.conducteur !== 'Non affectÃ©');
   if(sorted.length === 0) return;
 
   const dateBadge = document.getElementById('dateBadge').textContent;
@@ -1159,7 +1158,7 @@ async function exportExcel(){
   const totalCols = TOURNEES_PER_BAND * 3;
 
   ws[XLSX.utils.encode_cell({ r: curRow, c: 0 })] = {
-    v: `Tournée de Distribution FT69${dateStr}`,
+    v: `TournÃ©e de Distribution FT69${dateStr}`,
     t: 's',
     s: styleTitle
   };
@@ -1299,7 +1298,7 @@ function injectPrintSettings(xml){
 }
 async function handleFile(file){
   if(!file || file.type !== 'application/pdf'){
-    setStatus('warn', 'Merci de sélectionner un fichier PDF.');
+    setStatus('warn', 'Merci de sÃ©lectionner un fichier PDF.');
     return;
   }
   setStatus('wait', 'Lecture du PDF en cours...');
@@ -1310,7 +1309,7 @@ async function handleFile(file){
     const parsed = parseLines(parsedFileLines);
 
     if(parsed.tournees.length === 0){
-      setStatus('warn', 'Aucune tournée détectée — vérifiez que ce PDF est le bon fichier.');
+      setStatus('warn', 'Aucune tournÃ©e dÃ©tectÃ©e â€” vÃ©rifiez que ce PDF est le bon fichier.');
       return;
     }
 
@@ -1320,13 +1319,13 @@ async function handleFile(file){
     document.getElementById('exportBtn').disabled = false;
     document.getElementById('printBtn').disabled = false;
     document.getElementById('labelsBtn').disabled = false;
-    document.getElementById('dateBadge').textContent = parsed.fileDate ? ('Tournées du ' + parsed.fileDate) : 'Date non détectée';
+    document.getElementById('dateBadge').textContent = parsed.fileDate ? ('TournÃ©es du ' + parsed.fileDate) : 'Date non dÃ©tectÃ©e';
     document.getElementById('searchInput').value = '';
     document.getElementById('sortSelect').value = 'code';
     refresh();
 
     const now = new Date().toLocaleTimeString('fr-FR', {hour:'2-digit', minute:'2-digit'});
-    setStatus('ok', `${tournees.length} tournées importées — mis à jour à ${now}`);
+    setStatus('ok', `${tournees.length} tournÃ©es importÃ©es â€” mis Ã  jour Ã  ${now}`);
   }catch(e){
     console.error(e);
     setStatus('warn', 'Erreur de lecture du PDF : ' + e.message);
@@ -1343,7 +1342,7 @@ function generateLabelsFile() {
   const rowsForLabels = [];
   tournees.forEach(t => {
     t.destinataires.forEach(d => {
-      // 1 par défaut, ou la valeur saisie manuellement si elle existe
+      // 1 par dÃ©faut, ou la valeur saisie manuellement si elle existe
       let qte = 1;
       if(d.realPalettes !== '' && !isNaN(d.realPalettes) && Number(d.realPalettes) > 0) {
         qte = Number(d.realPalettes);
@@ -1365,7 +1364,7 @@ function generateLabelsFile() {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Import bordereau ? Étiquettes palettes - Delanchy</title>
+<title>Import bordereau ? Ã‰tiquettes palettes - Delanchy</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"><\/script>
 <style>
 :root { --color-delanchy-blue: #0A3663; --color-delanchy-light: #EBF3FC; --color-text-primary: #1C2D42; --color-text-secondary: #5F738C; --color-border-tertiary: #D2DFEE; --border-radius-lg: 12px; --border-radius-md: 8px; }
@@ -1389,14 +1388,14 @@ tr.excluded { opacity: 0.35; }
 .small-muted { font-size: 11px; color: var(--color-text-secondary); }
 .btn-print { width: 100%; padding: 14px; font-size: 14px; font-weight: 700; border: 1.5px solid var(--color-delanchy-blue); border-radius: var(--border-radius-md); cursor: pointer; background: white; color: var(--color-delanchy-blue); margin-top: 12px; }
 
-/* Grille écran : 2 colonnes */
+/* Grille Ã©cran : 2 colonnes */
 #labels-output { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 1.25rem; }
 .label-card { background: white; border: 1.5px dashed var(--color-delanchy-blue); border-radius: var(--border-radius-md); padding: 12px; text-align: center; }
 .label-card .qr-box { display: flex; justify-content: center; margin-bottom: 8px; }
 .label-card .info { font-size: 10.5px; line-height: 1.4; color: var(--color-text-primary); text-align: left; }
 .label-card .info b { color: var(--color-delanchy-blue); }
 
-/* Format d'impression pour forcer exactement 8 étiquettes par page (2 colonnes x 4 lignes) */
+/* Format d'impression pour forcer exactement 8 Ã©tiquettes par page (2 colonnes x 4 lignes) */
 @media print {
   @page { size: A4 portrait; margin: 10mm; }
   body { background: white; }
@@ -1428,26 +1427,26 @@ tr.excluded { opacity: 0.35; }
 <div class="wrap">
   <div class="header-container no-print">
     <div class="header-text">
-      <h1>Import bordereau ? Étiquettes</h1>
-      <p>Généré automatiquement depuis le récap des tournées</p>
+      <h1>Import bordereau ? Ã‰tiquettes</h1>
+      <p>GÃ©nÃ©rÃ© automatiquement depuis le rÃ©cap des tournÃ©es</p>
     </div>
   </div>
   <div class="section-card no-print">
-    <div class="field-label">Lien de l'outil "Reste à quai"</div>
+    <div class="field-label">Lien de l'outil "Reste Ã  quai"</div>
     <input type="text" id="f-url" value="https://script.google.com/macros/s/AKfycbz1lH0J-xVixB3zGQXHmD3JU4ochdwa77n1chH7BfLHXBOe7WtYqFqSu6GwXT7sCEp14g/exec">
   </div>
   <div class="section-card no-print" id="review-card">
-    <div class="field-label" style="margin-bottom:12px;">Vérifie et ajuste avant impression (1 palette par défaut par client)</div>
+    <div class="field-label" style="margin-bottom:12px;">VÃ©rifie et ajuste avant impression (1 palette par dÃ©faut par client)</div>
     <div style="overflow-x:auto;">
       <table>
-        <thead><tr><th></th><th>Tournée</th><th>Client</th><th>Détails</th><th>Qté (Palettes)</th></tr></thead>
+        <thead><tr><th></th><th>TournÃ©e</th><th>Client</th><th>DÃ©tails</th><th>QtÃ© (Palettes)</th></tr></thead>
         <tbody id="review-body"></tbody>
       </table>
     </div>
-    <button class="btn-submit" style="margin-top:16px;" onclick="genererEtiquettes()">Générer les étiquettes QR</button>
+    <button class="btn-submit" style="margin-top:16px;" onclick="genererEtiquettes()">GÃ©nÃ©rer les Ã©tiquettes QR</button>
   </div>
   <div id="labels-output"></div>
-  <button class="btn-print no-print" id="btn-imprimer" style="display:none;" onclick="window.print()">??? Imprimer les étiquettes</button>
+  <button class="btn-print no-print" id="btn-imprimer" style="display:none;" onclick="window.print()">??? Imprimer les Ã©tiquettes</button>
 </div>
 <script>
 let extractedRows = ${JSON.stringify(rowsForLabels)};
@@ -1486,7 +1485,7 @@ function genererEtiquettes() {
       const card = document.createElement('div');
       card.className = 'label-card';
       const qrId = 'qr-' + count;
-      card.innerHTML = '<div class="qr-box" id="' + qrId + '"></div><div class="info"><b>' + r.client + '</b><br>Tournée ' + r.tournee + '<br><span class="small-muted">' + r.fournisseurs + '</span></div>';
+      card.innerHTML = '<div class="qr-box" id="' + qrId + '"></div><div class="info"><b>' + r.client + '</b><br>TournÃ©e ' + r.tournee + '<br><span class="small-muted">' + r.fournisseurs + '</span></div>';
       output.appendChild(card);
       new QRCode(document.getElementById(qrId), { text: data, width: 110, height: 110, correctLevel: QRCode.CorrectLevel.M });
       count++;
@@ -1524,7 +1523,7 @@ document.getElementById('toggleAllBtn').addEventListener('click', () => {
     expandedCodes.clear();
   }
   renderCards(lastList);
-  document.getElementById('toggleAllBtn').textContent = expandedCodes.size === 0 ? '?? Tout déplier' : '?? Tout replier';
+  document.getElementById('toggleAllBtn').textContent = expandedCodes.size === 0 ? '?? Tout dÃ©plier' : '?? Tout replier';
 });
 
 document.querySelectorAll('.tab').forEach(btn => {
