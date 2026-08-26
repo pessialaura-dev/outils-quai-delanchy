@@ -60,19 +60,19 @@
 #dch-login-gate .dch-error{ color:#DC2626; font-size:12.5px; margin-top:10px; min-height:16px; font-weight:700; }
 
 .role-hidden{ display:none !important; }
-</style>
+
 body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
 
 .app-tabs-bar{
   display:flex; gap:8px; max-width:900px; margin:0 auto 18px; padding:6px;
-  background:#E7ECF2; border-radius:12px; position:sticky; top:0; z-index:50;
+  background:#EDF1F3; border-radius:12px; position:sticky; top:0; z-index:50;
 }
 .app-tab-btn{
   flex:1; border:none; background:transparent; padding:12px 16px; border-radius:9px;
-  font-weight:800 !important; font-size:14px; color:#5F738C; cursor:pointer;
+  font-weight:800 !important; font-size:14px; color:#5F7E93; cursor:pointer;
   transition:all .15s;
 }
-.app-tab-btn.active{ background:#fff; color:#0A3663; box-shadow:0 2px 6px rgba(10,54,99,0.12); }
+.app-tab-btn.active{ background:#fff; color:#5F7E93; box-shadow:0 2px 6px rgba(126,158,179,0.25); }
 .app-view{ display:none; }
 .app-view.active{ display:block; }
 @media print{
@@ -80,11 +80,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
 }
 
 :root {   
-  --color-delanchy-blue: #0A3663;  
-  --color-delanchy-light: #EBF3FC;  
-  --color-text-primary: #1C2D42;  
-  --color-text-secondary: #5F738C;  
-  --color-border-tertiary: #D2DFEE;  
+  --color-delanchy-blue: #7E9EB3;  
+  --color-delanchy-light: #EAF0F3;  
+  --color-text-primary: #1A1A1A;  
+  --color-text-secondary: #5A6B76;  
+  --color-border-tertiary: #D5DEE3;  
   --border-radius-lg: 12px;  
   --border-radius-md: 8px;
  }
@@ -118,7 +118,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
   background: white;  
   padding: 15px 20px;  
   border-radius: var(--border-radius-lg);  
-  box-shadow: 0 4px 10px rgba(10,54,99,0.06);  
+  box-shadow: 0 4px 10px rgba(126,158,179,0.06);  
   border-left: 6px solid var(--color-delanchy-blue);  
  }
 #app-raq .header-text h1 {  font-size: 21px; font-weight: 800; color: var(--color-delanchy-blue); letter-spacing: -0.5px;  }
@@ -134,9 +134,9 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
   border-radius: var(--border-radius-lg);  
   padding: 1.5rem;  
   margin-bottom: 1.25rem;  
-  box-shadow: 0 4px 6px rgba(10,54,99,0.02);  
+  box-shadow: 0 4px 6px rgba(126,158,179,0.02);  
  }
-#app-raq .section-card:hover {  border-color: #B4CDEB; box-shadow: 0 6px 14px rgba(10,54,99,0.05);  }
+#app-raq .section-card:hover {  border-color: #B4CDEB; box-shadow: 0 6px 14px rgba(126,158,179,0.05);  }
 #app-raq .section-top {  display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; border-bottom: 1px dashed var(--color-border-tertiary); padding-bottom: 8px;  }
 #app-raq .section-title {  font-size: 14px; font-weight: 700; color: var(--color-delanchy-blue);  }
 #app-raq input, #app-raq select {  
@@ -150,7 +150,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
   outline: none;  
   transition: all 0.2s;
  }
-#app-raq input:focus, #app-raq select:focus {  border-color: var(--color-delanchy-blue); box-shadow: 0 0 0 3px rgba(10,54,99,0.1);  }
+#app-raq input:focus, #app-raq select:focus {  border-color: var(--color-delanchy-blue); box-shadow: 0 0 0 3px rgba(126,158,179,0.1);  }
 #app-raq .btn-remove {  background: none; border: none; color: #94A3B8; cursor: pointer; font-size: 22px; padding: 0 4px; line-height: 1;  }
 #app-raq .btn-remove:hover {  color: #EF4444;  }
 #app-raq .btn-add {  
@@ -194,9 +194,9 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
   cursor: pointer;  
   background: var(--color-delanchy-blue);  
   color: white;  
-  box-shadow: 0 4px 6px rgba(10,54,99,0.15);  
+  box-shadow: 0 4px 6px rgba(126,158,179,0.15);  
  }
-#app-raq .btn-submit:hover {  background: #072545;  }
+#app-raq .btn-submit:hover {  background: #5F7E93;  }
 #app-raq .top-row {  
   display: grid;  
   grid-template-columns: 1fr 1fr;  
@@ -206,7 +206,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
   padding: 15px;  
   border-radius: var(--border-radius-lg);  
   border: 1px solid var(--color-border-tertiary);  
-  box-shadow: 0 4px 6px rgba(10,54,99,0.02);
+  box-shadow: 0 4px 6px rgba(126,158,179,0.02);
  }
 #app-raq .field-col {  display: flex; flex-direction: column;  }
 #app-raq .recap {  background: #1E293B; color: white; border-radius: var(--border-radius-lg); padding: 1.5rem; margin-bottom: 1.25rem; display: none; box-shadow: 0 4px 10px rgba(0,0,0,0.15);  }
@@ -215,8 +215,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
 #app-raq .recap-line span {  color: white; font-weight: 600;  }
 #app-raq .badge {  display: inline-block; background: #22C55E; color: white; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: var(--border-radius-md); margin-bottom: 12px;  }
 :root { 
-    --primary:#0B3D62; --primary-dark:#082C48; --accent:#0E9384; --accent-light:#E4F7F4;
-    --bg:#F4F6F8; --card:#FFFFFF; --ink:#1B2733; --muted:#64748B; --border:#E3E8EF;
+    --primary:#7E9EB3; --primary-dark:#5F7E93; --accent:#0E9384; --accent-light:#E4F7F4;
+    --bg:#E3E3E3; --card:#FFFFFF; --ink:#1A1A1A; --muted:#5A6B76; --border:#D5DEE3;
     --warn-bg:#FEF6E7; --warn-ink:#8A5A00;
    }
 #app-dashboard { 
@@ -336,7 +336,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
 #app-dashboard footer { margin-top:24px; font-size:0.75rem; color:var(--muted); text-align:center; }
 #app-dashboard .planning-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:6px; align-items:start; }
 #app-dashboard .plan-box { border:1px solid #999; background:#fff; display:flex; flex-direction:column; }
-#app-dashboard .plan-head { background:#1B1B1B; color:#fff; font-weight:700; font-size:0.72rem; text-align:center; padding:5px 3px; line-height:1.25; }
+#app-dashboard .plan-head { background:#5F7E93; color:#fff; font-weight:700; font-size:0.72rem; text-align:center; padding:5px 3px; line-height:1.25; }
 #app-dashboard .plan-head .plan-code { font-weight:800; font-size:0.68rem; opacity:0.85; display:block; margin-top:1px; }
 #app-dashboard .plan-driver { background:#FFE900; color:#000; font-weight:700; font-size:0.72rem; text-align:center; padding:4px 3px; border-top:1px solid #999; border-bottom:1px solid #999; line-height:1.25; display:flex; flex-direction:column; align-items:center; gap:1px; }
 #app-dashboard .plan-driver .plan-driver-code { font-weight:800; display:block; }
@@ -387,19 +387,19 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
 </div>
 
 <div class="app-tabs-bar">
-  <button class="app-tab-btn active" data-app="raq" data-roles="admin,quai" onclick="switchApp('raq')">📋 Reste à Quai</button>
-  <button class="app-tab-btn" data-app="dashboard" data-roles="admin,exploit,quai" onclick="switchApp('dashboard')">📊 Récap Tournées</button>
+  <button class="app-tab-btn active" data-app="raq" data-roles="admin,quai" onclick="switchApp('raq')"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px;flex-shrink:0;"><rect x="6" y="4" width="12" height="17" rx="2"/><rect x="9" y="2" width="6" height="4" rx="1"/><line x1="9" y1="10" x2="15" y2="10"/><line x1="9" y1="14" x2="15" y2="14"/></svg>Reste à Quai</button>
+  <button class="app-tab-btn" data-app="dashboard" data-roles="admin,exploit,quai" onclick="switchApp('dashboard')"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px;flex-shrink:0;"><line x1="5" y1="20" x2="5" y2="12"/><line x1="12" y1="20" x2="12" y2="7"/><line x1="19" y1="20" x2="19" y2="14"/></svg>Récap Tournées</button>
   
   <!-- Ajout du lien vers ton scanner Cloudflare -->
   <a href="https://delanchy-suivi-quai.pessialaura.workers.dev/" target="_blank" class="app-tab-btn" data-roles="admin,quai" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; background-color: transparent; color: inherit; cursor: pointer;">
-    📷 Scanner QR
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px;flex-shrink:0;"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7l1.5-2.5h5L16 7"/><circle cx="12" cy="13.5" r="3.5"/></svg>Scanner QR
   </a>
 </div>
 <a href="https://docs.google.com/spreadsheets/d/1QPSblJ_WSFSU8uU27-9SIgWnd75HPQQXFSV2BoNMLiI/edit?gid=0#gid=0" target="_blank" class="app-tab-btn" data-roles="admin,exploit" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; background-color: transparent; color: inherit; cursor: pointer;">
-    📑 Ouvrir Reste à quai
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px;flex-shrink:0;"><path d="M7 3h7l4 4v14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="15" y2="16"/></svg>Ouvrir Reste à quai
   </a>
   <a href="https://docs.google.com/spreadsheets/d/1pwTCtFlTToj_qVIL6CdI-pWME_LeAqyUGdwcB_bYBWI/edit?gid=609620987#gid=609620987" target="_blank" class="app-tab-btn" data-roles="admin,exploit" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; background-color: transparent; color: inherit; cursor: pointer;">
-    📦 Ouvrir Palette Data
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px;flex-shrink:0;"><path d="M3 8l9-5 9 5-9 5-9-5z"/><path d="M3 8v9l9 5 9-5V8"/><line x1="12" y1="13" x2="12" y2="22"/></svg>Ouvrir Palette Data
   </a>
 <div id="app-raq" class="app-view active">
 <div class="bg-overlay"></div>
@@ -470,7 +470,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
 
 <div class="drop-zone" id="dropZone">
   <div class="drop-left">
-    <div class="drop-icon">📄</div>
+    <div class="drop-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px;flex-shrink:0;"><path d="M7 3h7l4 4v14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/></svg></div>
     <div>
       <strong>Glissez votre PDF ici (w2plancharg_dly.pdf)</strong>
       <p>Ou cliquez pour parcourir — les données du jour remplacent celles affichées.</p>
@@ -479,12 +479,12 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
   </div>
   <div style="display:flex; gap:10px; flex-wrap:wrap;">
     <div class="file-wrap">
-      <button class="btn">📥 Importer un PDF</button>
+      <button class="btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px;flex-shrink:0;"><path d="M12 3v11"/><path d="M8 10l4 4 4-4"/><path d="M4 19h16"/></svg>Importer un PDF</button>
       <input type="file" id="pdfInput" accept="application/pdf">
     </div>
-    <button class="btn btn-print" id="printBtn" disabled>🖨️ Imprimer la Checklist</button>
-    <button class="btn btn-export" id="exportBtn" disabled>📊 Export Excel — Planning</button>
-    <button class="btn btn-labels" id="labelsBtn" data-roles="admin" disabled>🏷️ Générer les étiquettes QR</button>
+    <button class="btn btn-print" id="printBtn" disabled><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px;flex-shrink:0;"><path d="M6 9V3h12v6"/><rect x="4" y="9" width="16" height="8" rx="1"/><path d="M6 17v4h12v-4"/></svg>Imprimer la Checklist</button>
+    <button class="btn btn-export" id="exportBtn" disabled><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px;flex-shrink:0;"><line x1="5" y1="20" x2="5" y2="12"/><line x1="12" y1="20" x2="12" y2="7"/><line x1="19" y1="20" x2="19" y2="14"/></svg>Export Excel — Planning</button>
+    <button class="btn btn-labels" id="labelsBtn" data-roles="admin" disabled><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px;flex-shrink:0;"><path d="M20 12l-8 8-9-9V4h7l10 10z"/><circle cx="8" cy="8" r="1.3" fill="currentColor" stroke="none"/></svg>Générer les étiquettes QR</button>
   </div>
 </div>
 
@@ -498,10 +498,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
 
 <div class="controls">
   <div class="search">
-    <input type="text" id="searchInput" placeholder="🔍 Rechercher une tournée, un chauffeur, un destinataire...">
+    <input type="text" id="searchInput" placeholder="Rechercher une tournée, un chauffeur, un destinataire...">
   </div>
   <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
-    <button class="btn btn-outline" id="toggleAllBtn">🔽 Tout déplier</button>
+    <button class="btn btn-outline" id="toggleAllBtn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px;flex-shrink:0;"><polyline points="6 9 12 15 18 9"/></svg>Tout déplier</button>
     <div class="sort">
       <select id="sortSelect">
         <option value="code">Code tournée (alphanumérique)</option>
@@ -512,9 +512,9 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
       </select>
     </div>
     <div class="tabs">
-      <button class="tab active" data-view="cards">🗂️ Cartes</button>
-      <button class="tab" data-view="table">📋 Tableau / Saisie</button>
-      <button class="tab" data-view="planning">🗓️ Planning</button>
+      <button class="tab active" data-view="cards"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px;flex-shrink:0;"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>Cartes</button>
+      <button class="tab" data-view="table"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px;flex-shrink:0;"><rect x="6" y="4" width="12" height="17" rx="2"/><rect x="9" y="2" width="6" height="4" rx="1"/><line x1="9" y1="10" x2="15" y2="10"/><line x1="9" y1="14" x2="15" y2="14"/></svg>Tableau / Saisie</button>
+      <button class="tab" data-view="planning"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px;flex-shrink:0;"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg>Planning</button>
     </div>
   </div>
 </div>
@@ -554,6 +554,7 @@ const DCH_ROLES = {
   "6901": { name: "exploit", label: "Exploit" },
   "6902": { name: "quai",    label: "Quai"    }
 };
+const DCH_ICON = {"clipboard": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"vertical-align:-3px;margin-right:5px;flex-shrink:0;\"><rect x=\"6\" y=\"4\" width=\"12\" height=\"17\" rx=\"2\"/><rect x=\"9\" y=\"2\" width=\"6\" height=\"4\" rx=\"1\"/><line x1=\"9\" y1=\"10\" x2=\"15\" y2=\"10\"/><line x1=\"9\" y1=\"14\" x2=\"15\" y2=\"14\"/></svg>", "bar-chart": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"vertical-align:-3px;margin-right:5px;flex-shrink:0;\"><line x1=\"5\" y1=\"20\" x2=\"5\" y2=\"12\"/><line x1=\"12\" y1=\"20\" x2=\"12\" y2=\"7\"/><line x1=\"19\" y1=\"20\" x2=\"19\" y2=\"14\"/></svg>", "camera": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"vertical-align:-3px;margin-right:5px;flex-shrink:0;\"><rect x=\"3\" y=\"7\" width=\"18\" height=\"13\" rx=\"2\"/><path d=\"M8 7l1.5-2.5h5L16 7\"/><circle cx=\"12\" cy=\"13.5\" r=\"3.5\"/></svg>", "document": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"vertical-align:-3px;margin-right:5px;flex-shrink:0;\"><path d=\"M7 3h7l4 4v14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z\"/><line x1=\"9\" y1=\"12\" x2=\"15\" y2=\"12\"/><line x1=\"9\" y1=\"16\" x2=\"15\" y2=\"16\"/></svg>", "box": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"vertical-align:-3px;margin-right:5px;flex-shrink:0;\"><path d=\"M3 8l9-5 9 5-9 5-9-5z\"/><path d=\"M3 8v9l9 5 9-5V8\"/><line x1=\"12\" y1=\"13\" x2=\"12\" y2=\"22\"/></svg>", "file": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"vertical-align:-3px;margin-right:5px;flex-shrink:0;\"><path d=\"M7 3h7l4 4v14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z\"/></svg>", "download": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"vertical-align:-3px;margin-right:5px;flex-shrink:0;\"><path d=\"M12 3v11\"/><path d=\"M8 10l4 4 4-4\"/><path d=\"M4 19h16\"/></svg>", "printer": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"vertical-align:-3px;margin-right:5px;flex-shrink:0;\"><path d=\"M6 9V3h12v6\"/><rect x=\"4\" y=\"9\" width=\"16\" height=\"8\" rx=\"1\"/><path d=\"M6 17v4h12v-4\"/></svg>", "tag": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"vertical-align:-3px;margin-right:5px;flex-shrink:0;\"><path d=\"M20 12l-8 8-9-9V4h7l10 10z\"/><circle cx=\"8\" cy=\"8\" r=\"1.3\" fill=\"currentColor\" stroke=\"none\"/></svg>", "chevron-down": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"vertical-align:-3px;margin-right:5px;flex-shrink:0;\"><polyline points=\"6 9 12 15 18 9\"/></svg>", "chevron-up": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"vertical-align:-3px;margin-right:5px;flex-shrink:0;\"><polyline points=\"6 15 12 9 18 15\"/></svg>", "grid": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"vertical-align:-3px;margin-right:5px;flex-shrink:0;\"><rect x=\"3\" y=\"3\" width=\"7\" height=\"7\"/><rect x=\"14\" y=\"3\" width=\"7\" height=\"7\"/><rect x=\"3\" y=\"14\" width=\"7\" height=\"7\"/><rect x=\"14\" y=\"14\" width=\"7\" height=\"7\"/></svg>", "calendar": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"vertical-align:-3px;margin-right:5px;flex-shrink:0;\"><rect x=\"3\" y=\"5\" width=\"18\" height=\"16\" rx=\"2\"/><line x1=\"3\" y1=\"10\" x2=\"21\" y2=\"10\"/><line x1=\"8\" y1=\"3\" x2=\"8\" y2=\"7\"/><line x1=\"16\" y1=\"3\" x2=\"16\" y2=\"7\"/></svg>", "user": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"13\" height=\"13\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"vertical-align:-3px;margin-right:5px;flex-shrink:0;\"><circle cx=\"12\" cy=\"8\" r=\"4\"/><path d=\"M4 20c0-4 4-6 8-6s8 2 8 6\"/></svg>", "truck": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"vertical-align:-3px;margin-right:5px;flex-shrink:0;\"><rect x=\"1\" y=\"8\" width=\"13\" height=\"9\"/><path d=\"M14 11h4l3 3v3h-7z\"/><circle cx=\"6\" cy=\"19\" r=\"1.6\"/><circle cx=\"17.5\" cy=\"19\" r=\"1.6\"/></svg>", "scale": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"13\" height=\"13\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"vertical-align:-3px;margin-right:5px;flex-shrink:0;\"><line x1=\"12\" y1=\"3\" x2=\"12\" y2=\"21\"/><path d=\"M5 8l-2.5 5a2.5 2.5 0 0 0 5 0z\"/><path d=\"M19 8l-2.5 5a2.5 2.5 0 0 0 5 0z\"/><line x1=\"6\" y1=\"6\" x2=\"18\" y2=\"6\"/></svg>", "layers": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"13\" height=\"13\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"vertical-align:-3px;margin-right:5px;flex-shrink:0;\"><polygon points=\"12 2 21 7 12 12 3 7\"/><polyline points=\"3 12 12 17 21 12\"/></svg>", "check": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"13\" height=\"13\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"vertical-align:-3px;margin-right:5px;flex-shrink:0;margin-right:3px;\"><polyline points=\"4 12 9 17 20 6\"/></svg>", "x": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"13\" height=\"13\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"vertical-align:-3px;margin-right:5px;flex-shrink:0;margin-right:3px;\"><line x1=\"5\" y1=\"5\" x2=\"19\" y2=\"19\"/><line x1=\"19\" y1=\"5\" x2=\"5\" y2=\"19\"/></svg>"};
 const DCH_STORAGE_KEY = "outilsQuaiRole";
 
 function dchTryLogin(){
@@ -801,7 +802,7 @@ function valider() {
   rows.forEach(r => {    
     html += `<div class="recap-line" style="padding:6px 0; border-top: 1.5px dashed #334155; margin-top:6px;">
       <b>[${r.fournisseur}]</b> ${r.client} (${r.ville}) <br>
-      📦 Produit : <span>${r.type_produit}</span> | Statut : <span style="color:#F59E0B;">${r.motif_statut}</span> <br>
+      ${DCH_ICON.box}Produit : <span>${r.type_produit}</span> | Statut : <span style="color:#F59E0B;">${r.motif_statut}</span> <br>
       Palettes : <span>${r.palettes}</span> | Colis : <span>${r.colis}</span> | Poids : <span>${r.poids} kg</span>
     </div>`;  
   });  
@@ -828,12 +829,12 @@ function valider() {
       const badge = recap.querySelector('.badge');
       if (res.status === "success") {
         if (badge) {
-          badge.textContent = "Enregistré dans le Sheets ✅";
+          badge.innerHTML = DCH_ICON.check + "Enregistré dans le Sheets";
           badge.style.background = "#22C55E";
         }
       } else {
         if (badge) {
-          badge.textContent = "Erreur de transmission ❌";
+          badge.innerHTML = DCH_ICON.x + "Erreur de transmission";
           badge.style.background = "#EF4444";
         }
         alert("Erreur retournée par le script : " + res.message);
@@ -842,7 +843,7 @@ function valider() {
     .catch(function(err) {
       const badge = recap.querySelector('.badge');
       if (badge) {
-        badge.textContent = "Erreur réseau ❌";
+        badge.innerHTML = DCH_ICON.x + "Erreur réseau";
         badge.style.background = "#EF4444";
       }
       alert("Erreur critique : " + err);
@@ -1091,14 +1092,14 @@ function renderCards(list){
         <span class="chevron">${isOpen ? '▼' : '▶'}</span>
       </div>
       <div class="card-driver">
-        <span>👤 ${t.conducteur}</span>
-        <span class="veh-field">🚚 <input type="text" class="veh-input" placeholder="N° véhicule" value="${escapeAttr(getVehicule(t.code))}"></span>
+        <span>${DCH_ICON.user}${t.conducteur}</span>
+        <span class="veh-field">${DCH_ICON.truck}<input type="text" class="veh-input" placeholder="N° véhicule" value="${escapeAttr(getVehicule(t.code))}"></span>
         <span>${t.destinataires.length} destinataire(s)</span>
       </div>
       <div class="card-totals">
-        <span>📦 ${colis.toLocaleString('fr-FR')} colis</span>
-        <span>⚖️ ${poids.toLocaleString('fr-FR')} kg</span>
-        ${pal ? `<span>🧱 ${pal} pal.</span>` : ''}
+        <span>${DCH_ICON.box}${colis.toLocaleString('fr-FR')} colis</span>
+        <span>${DCH_ICON.scale}${poids.toLocaleString('fr-FR')} kg</span>
+        ${pal ? `<span>${DCH_ICON.layers}${pal} pal.</span>` : ''}
       </div>
       ${isOpen ? `
       <div class="card-body">
@@ -1205,7 +1206,7 @@ function renderPlanning(list){
       <div class="plan-head">${t.libelle}<span class="plan-code">${t.code}</span></div>
       <div class="plan-driver">
         <span class="plan-driver-code">${t.conducteur}</span>
-        ${getVehicule(t.code) ? `<span class="plan-vehicule">🚚 ${getVehicule(t.code)}</span>` : ''}
+        ${getVehicule(t.code) ? `<span class="plan-vehicule">${DCH_ICON.truck}${getVehicule(t.code)}</span>` : ''}
       </div>
       <div class="plan-list">
         ${t.destinataires.length
@@ -1515,14 +1516,14 @@ function generateLabelsFile() {
 <title>Import bordereau — Étiquettes palettes - Delanchy</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"><\/script>
 <style>
-:root { --color-delanchy-blue: #0A3663; --color-delanchy-light: #EBF3FC; --color-text-primary: #1C2D42; --color-text-secondary: #5F738C; --color-border-tertiary: #D2DFEE; --border-radius-lg: 12px; --border-radius-md: 8px; }
+:root { --color-delanchy-blue: #7E9EB3; --color-delanchy-light: #EAF0F3; --color-text-primary: #1A1A1A; --color-text-secondary: #5A6B76; --color-border-tertiary: #D5DEE3; --border-radius-lg: 12px; --border-radius-md: 8px; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #F4F7FA; color: var(--color-text-primary); }
 .wrap { padding: 1.5rem 1rem 3rem; max-width: 900px; margin: 0 auto; }
-.header-container { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; background: white; padding: 15px 20px; border-radius: var(--border-radius-lg); box-shadow: 0 4px 10px rgba(10,54,99,0.06); border-left: 6px solid var(--color-delanchy-blue); }
+.header-container { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; background: white; padding: 15px 20px; border-radius: var(--border-radius-lg); box-shadow: 0 4px 10px rgba(126,158,179,0.06); border-left: 6px solid var(--color-delanchy-blue); }
 .header-text h1 { font-size: 21px; font-weight: 800; color: var(--color-delanchy-blue); }
 .header-text p { font-size: 13px; color: var(--color-text-secondary); margin-top: 4px; font-style: italic; }
-.section-card { background: white; border: 1px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1.5rem; margin-bottom: 1.25rem; box-shadow: 0 4px 6px rgba(10,54,99,0.02); }
+.section-card { background: white; border: 1px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1.5rem; margin-bottom: 1.25rem; box-shadow: 0 4px 6px rgba(126,158,179,0.02); }
 .field-label { font-size: 11px; font-weight: 700; color: var(--color-delanchy-blue); margin-bottom: 5px; text-transform: uppercase; }
 input { width: 100%; padding: 11px; font-size: 14px; border: 1px solid #CBD5E1; border-radius: var(--border-radius-md); margin-bottom: 12px; }
 .btn-submit { width: 100%; padding: 14px; font-size: 14px; font-weight: 700; border: none; border-radius: var(--border-radius-md); cursor: pointer; background: var(--color-delanchy-blue); color: white; }
@@ -1594,7 +1595,7 @@ tr.excluded { opacity: 0.35; }
     <button class="btn-submit" style="margin-top:16px;" onclick="genererEtiquettes()">Générer les étiquettes QR</button>
   </div>
   <div id="labels-output"></div>
-  <button class="btn-print no-print" id="btn-imprimer" style="display:none;" onclick="window.print()">🖨️ Imprimer les étiquettes</button>
+  <button class="btn-print no-print" id="btn-imprimer" style="display:none;" onclick="window.print()"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px;flex-shrink:0;"><path d="M6 9V3h12v6"/><rect x="4" y="9" width="16" height="8" rx="1"/><path d="M6 17v4h12v-4"/></svg>Imprimer les étiquettes</button>
 </div>
 <script>
 let extractedRows = ${JSON.stringify(rowsForLabels)};
@@ -1671,7 +1672,7 @@ document.getElementById('toggleAllBtn').addEventListener('click', () => {
     expandedCodes.clear();
   }
   renderCards(lastList);
-  document.getElementById('toggleAllBtn').textContent = expandedCodes.size === 0 ? '🔽 Tout déplier' : '🔼 Tout replier';
+  document.getElementById('toggleAllBtn').textContent = expandedCodes.size === 0 ? (DCH_ICON['chevron-down'] + 'Tout déplier') : (DCH_ICON['chevron-up'] + 'Tout replier');
 });
 
 document.querySelectorAll('.tab').forEach(btn => {
