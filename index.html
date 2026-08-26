@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -11,7 +12,55 @@
   pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 </script>
 <style>
+/* --- Charte graphique Delanchy (officielle, a reutiliser dans tous les fichiers) --- */
+:root{
+  --dch-blue:#7E9EB3;
+  --dch-blue-dark:#5F7E93;
+  --dch-bg:#E3E3E3;
+  --dch-ink:#000000;
+  --dch-white:#FFFFFF;
+}
 * { box-sizing: border-box; margin: 0; padding: 0; }
+
+#dch-topbar{
+  background:var(--dch-blue); color:#fff; display:flex; align-items:center; justify-content:space-between;
+  padding:14px 22px; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+#dch-topbar .dch-logo{ font-weight:800; font-size:18px; letter-spacing:0.5px; }
+#dch-topbar .dch-logo span{ font-weight:400; opacity:0.85; font-size:12px; display:block; letter-spacing:1px; }
+#dch-topbar .dch-session{ font-size:13px; display:flex; align-items:center; gap:12px; }
+#dch-topbar .dch-logout-btn{
+  background:rgba(255,255,255,0.18); border:1px solid rgba(255,255,255,0.4); color:#fff;
+  padding:6px 12px; border-radius:7px; font-size:12.5px; cursor:pointer; font-weight:700;
+}
+#dch-topbar .dch-logout-btn:hover{ background:rgba(255,255,255,0.3); }
+
+#dch-login-gate{
+  position:fixed; inset:0; background:var(--dch-bg); z-index:9999;
+  display:flex; align-items:center; justify-content:center;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+#dch-login-gate .dch-card{
+  background:#fff; border-radius:14px; padding:38px 34px; width:100%; max-width:360px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.12); text-align:center;
+}
+#dch-login-gate h1{ font-size:23px; font-weight:800; color:var(--dch-ink); margin-bottom:6px; }
+#dch-login-gate p{ font-size:13px; color:#555; margin-bottom:22px; }
+#dch-login-gate input{
+  width:100%; padding:13px; font-size:20px; text-align:center; letter-spacing:6px;
+  border:1.5px solid #CBD5E1; border-radius:9px; margin-bottom:14px; font-weight:700;
+  color:var(--dch-ink); outline:none;
+}
+#dch-login-gate input:focus{ border-color:var(--dch-blue); box-shadow:0 0 0 3px rgba(126,158,179,0.25); }
+#dch-login-gate button{
+  width:100%; padding:13px; font-size:14px; font-weight:800; border:none; border-radius:9px;
+  background:var(--dch-blue); color:#fff; cursor:pointer;
+}
+#dch-login-gate button:hover{ background:var(--dch-blue-dark); }
+#dch-login-gate .dch-error{ color:#DC2626; font-size:12.5px; margin-top:10px; min-height:16px; font-weight:700; }
+
+.role-hidden{ display:none !important; }
+</style>
 body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
 
 .app-tabs-bar{
@@ -317,19 +366,39 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
 </head>
 <body>
 
+<!-- ===== Page de connexion (charte Delanchy) ===== -->
+<div id="dch-login-gate">
+  <div class="dch-card">
+    <h1>Connectez-vous</h1>
+    <p>Outils Quai — Delanchy</p>
+    <input type="password" inputmode="numeric" maxlength="6" id="dch-pin-input" placeholder="Code d'accès" autocomplete="off">
+    <button onclick="dchTryLogin()">Connexion</button>
+    <div class="dch-error" id="dch-login-error"></div>
+  </div>
+</div>
+
+<!-- ===== Bandeau haut (charte Delanchy) ===== -->
+<div id="dch-topbar">
+  <div class="dch-logo">DELANCHY<span>OUTILS QUAI</span></div>
+  <div class="dch-session">
+    <span id="dch-role-label"></span>
+    <button class="dch-logout-btn" onclick="dchLogout()">Déconnexion</button>
+  </div>
+</div>
+
 <div class="app-tabs-bar">
-  <button class="app-tab-btn active" data-app="raq" onclick="switchApp('raq')">📋 Reste à Quai</button>
-  <button class="app-tab-btn" data-app="dashboard" onclick="switchApp('dashboard')">📊 Récap Tournées</button>
+  <button class="app-tab-btn active" data-app="raq" data-roles="admin,quai" onclick="switchApp('raq')">📋 Reste à Quai</button>
+  <button class="app-tab-btn" data-app="dashboard" data-roles="admin,exploit,quai" onclick="switchApp('dashboard')">📊 Récap Tournées</button>
   
   <!-- Ajout du lien vers ton scanner Cloudflare -->
-  <a href="https://delanchy-suivi-quai.pessialaura.workers.dev/" target="_blank" class="app-tab-btn" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; background-color: transparent; color: inherit; cursor: pointer;">
+  <a href="https://delanchy-suivi-quai.pessialaura.workers.dev/" target="_blank" class="app-tab-btn" data-roles="admin,quai" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; background-color: transparent; color: inherit; cursor: pointer;">
     📷 Scanner QR
   </a>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1QPSblJ_WSFSU8uU27-9SIgWnd75HPQQXFSV2BoNMLiI/edit?gid=0#gid=0" target="_blank" class="app-tab-btn" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; background-color: transparent; color: inherit; cursor: pointer;">
+<a href="https://docs.google.com/spreadsheets/d/1QPSblJ_WSFSU8uU27-9SIgWnd75HPQQXFSV2BoNMLiI/edit?gid=0#gid=0" target="_blank" class="app-tab-btn" data-roles="admin,exploit" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; background-color: transparent; color: inherit; cursor: pointer;">
     📑 Ouvrir Reste à quai
   </a>
-  <a href="https://docs.google.com/spreadsheets/d/1pwTCtFlTToj_qVIL6CdI-pWME_LeAqyUGdwcB_bYBWI/edit?gid=609620987#gid=609620987" target="_blank" class="app-tab-btn" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; background-color: transparent; color: inherit; cursor: pointer;">
+  <a href="https://docs.google.com/spreadsheets/d/1pwTCtFlTToj_qVIL6CdI-pWME_LeAqyUGdwcB_bYBWI/edit?gid=609620987#gid=609620987" target="_blank" class="app-tab-btn" data-roles="admin,exploit" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; background-color: transparent; color: inherit; cursor: pointer;">
     📦 Ouvrir Palette Data
   </a>
 <div id="app-raq" class="app-view active">
@@ -415,7 +484,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
     </div>
     <button class="btn btn-print" id="printBtn" disabled>🖨️ Imprimer la Checklist</button>
     <button class="btn btn-export" id="exportBtn" disabled>📊 Export Excel — Planning</button>
-    <button class="btn btn-labels" id="labelsBtn" disabled>🏷️ Générer les étiquettes QR</button>
+    <button class="btn btn-labels" id="labelsBtn" data-roles="admin" disabled>🏷️ Générer les étiquettes QR</button>
   </div>
 </div>
 
@@ -476,6 +545,75 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
 // URL de deploiement du Web App Apps Script (code.gs) -- a verifier/mettre a jour
 // si tu crees un nouveau deploiement (Deployer > Nouveau deploiement).
 const RESTE_A_QUAI_API_URL = "https://script.google.com/macros/s/AKfycbyOoxDkycypgaGeuzwM0ACMI0Ww54NCb75MRXaluydRSnQVFhlm_mRLFj2lBEyCiWywZg/exec";
+
+// ===== Systeme de connexion par role (Outils Quai - Delanchy) =====
+// NB : ceci est un simple filtre d'acces pour usage interne, pas une vraie
+// securite -- le code est visible par quiconque inspecte la page (site statique).
+const DCH_ROLES = {
+  "6900": { name: "admin",   label: "Admin"   },
+  "6901": { name: "exploit", label: "Exploit" },
+  "6902": { name: "quai",    label: "Quai"    }
+};
+const DCH_STORAGE_KEY = "outilsQuaiRole";
+
+function dchTryLogin(){
+  const val = document.getElementById('dch-pin-input').value.trim();
+  const match = DCH_ROLES[val];
+  const errEl = document.getElementById('dch-login-error');
+  if(!match){
+    errEl.textContent = "Code incorrect.";
+    document.getElementById('dch-pin-input').value = '';
+    document.getElementById('dch-pin-input').focus();
+    return;
+  }
+  errEl.textContent = '';
+  localStorage.setItem(DCH_STORAGE_KEY, match.name);
+  dchApplyRole(match.name);
+}
+
+function dchLogout(){
+  localStorage.removeItem(DCH_STORAGE_KEY);
+  document.getElementById('dch-pin-input').value = '';
+  document.getElementById('dch-login-error').textContent = '';
+  document.getElementById('dch-login-gate').style.display = 'flex';
+}
+
+function dchApplyRole(role){
+  document.getElementById('dch-login-gate').style.display = 'none';
+
+  const roleLabels = { admin: "Admin", exploit: "Exploit", quai: "Quai" };
+  document.getElementById('dch-role-label').textContent = "Role : " + (roleLabels[role] || role);
+
+  document.querySelectorAll('[data-roles]').forEach(el => {
+    const allowed = el.getAttribute('data-roles').split(',');
+    if(allowed.includes(role)){
+      el.classList.remove('role-hidden');
+    } else {
+      el.classList.add('role-hidden');
+    }
+  });
+
+  // Si l'onglet "Reste a Quai" est masque pour ce role, on bascule sur "Recap Tournees" par defaut
+  const raqTab = document.querySelector('.app-tab-btn[data-app="raq"]');
+  if(raqTab.classList.contains('role-hidden')){
+    switchApp('dashboard');
+  }
+}
+
+function dchInit(){
+  const saved = localStorage.getItem(DCH_STORAGE_KEY);
+  if(saved && ['admin','exploit','quai'].includes(saved)){
+    dchApplyRole(saved);
+  } else {
+    document.getElementById('dch-login-gate').style.display = 'flex';
+  }
+}
+
+document.getElementById('dch-pin-input').addEventListener('keydown', function(e){
+  if(e.key === 'Enter') dchTryLogin();
+});
+
+dchInit();
 
 function switchApp(name){
   document.querySelectorAll('.app-view').forEach(el => el.classList.remove('active'));
