@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -318,19 +319,19 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
 <body>
 
 <div class="app-tabs-bar">
-  <button class="app-tab-btn active" data-app="raq" onclick="switchApp('raq')">?? Reste à Quai</button>
-  <button class="app-tab-btn" data-app="dashboard" onclick="switchApp('dashboard')">?? Récap Tournées</button>
+  <button class="app-tab-btn active" data-app="raq" onclick="switchApp('raq')">📋 Reste à Quai</button>
+  <button class="app-tab-btn" data-app="dashboard" onclick="switchApp('dashboard')">📊 Récap Tournées</button>
   
   <!-- Ajout du lien vers ton scanner Cloudflare -->
   <a href="https://delanchy-suivi-quai.pessialaura.workers.dev/" target="_blank" class="app-tab-btn" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; background-color: transparent; color: inherit; cursor: pointer;">
-    ?? Scanner QR
+    📷 Scanner QR
   </a>
 </div>
 <a href="https://docs.google.com/spreadsheets/d/1QPSblJ_WSFSU8uU27-9SIgWnd75HPQQXFSV2BoNMLiI/edit?gid=0#gid=0" target="_blank" class="app-tab-btn" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; background-color: transparent; color: inherit; cursor: pointer;">
-    ?? Ouvrir Reste à quai
+    📑 Ouvrir Reste à quai
   </a>
   <a href="https://docs.google.com/spreadsheets/d/1pwTCtFlTToj_qVIL6CdI-pWME_LeAqyUGdwcB_bYBWI/edit?gid=609620987#gid=609620987" target="_blank" class="app-tab-btn" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; background-color: transparent; color: inherit; cursor: pointer;">
-    ?? Ouvrir Palette Data
+    📦 Ouvrir Palette Data
   </a>
 <div id="app-raq" class="app-view active">
 <div class="bg-overlay"></div>
@@ -401,7 +402,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
 
 <div class="drop-zone" id="dropZone">
   <div class="drop-left">
-    <div class="drop-icon">??</div>
+    <div class="drop-icon">📄</div>
     <div>
       <strong>Glissez votre PDF ici (w2plancharg_dly.pdf)</strong>
       <p>Ou cliquez pour parcourir — les données du jour remplacent celles affichées.</p>
@@ -410,12 +411,12 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
   </div>
   <div style="display:flex; gap:10px; flex-wrap:wrap;">
     <div class="file-wrap">
-      <button class="btn">?? Importer un PDF</button>
+      <button class="btn">📥 Importer un PDF</button>
       <input type="file" id="pdfInput" accept="application/pdf">
     </div>
-    <button class="btn btn-print" id="printBtn" disabled>??? Imprimer la Checklist</button>
-    <button class="btn btn-export" id="exportBtn" disabled>?? Export Excel — Planning</button>
-    <button class="btn btn-labels" id="labelsBtn" disabled>??? Générer les étiquettes QR</button>
+    <button class="btn btn-print" id="printBtn" disabled>🖨️ Imprimer la Checklist</button>
+    <button class="btn btn-export" id="exportBtn" disabled>📊 Export Excel — Planning</button>
+    <button class="btn btn-labels" id="labelsBtn" disabled>🏷️ Générer les étiquettes QR</button>
   </div>
 </div>
 
@@ -429,10 +430,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
 
 <div class="controls">
   <div class="search">
-    <input type="text" id="searchInput" placeholder="?? Rechercher une tournée, un chauffeur, un destinataire...">
+    <input type="text" id="searchInput" placeholder="🔍 Rechercher une tournée, un chauffeur, un destinataire...">
   </div>
   <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
-    <button class="btn btn-outline" id="toggleAllBtn">?? Tout déplier</button>
+    <button class="btn btn-outline" id="toggleAllBtn">🔽 Tout déplier</button>
     <div class="sort">
       <select id="sortSelect">
         <option value="code">Code tournée (alphanumérique)</option>
@@ -443,9 +444,9 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
       </select>
     </div>
     <div class="tabs">
-      <button class="tab active" data-view="cards">?? Cartes</button>
-      <button class="tab" data-view="table">?? Tableau / Saisie</button>
-      <button class="tab" data-view="planning">??? Planning</button>
+      <button class="tab active" data-view="cards">🗂️ Cartes</button>
+      <button class="tab" data-view="table">📋 Tableau / Saisie</button>
+      <button class="tab" data-view="planning">🗓️ Planning</button>
     </div>
   </div>
 </div>
@@ -456,7 +457,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
   <table>
     <thead>
       <tr>
-        <th style="width:35px; text-align:center;">?</th>
+        <th style="width:35px; text-align:center;">✓</th>
         <th>Tournée</th><th>Libellé</th><th>Conducteur</th><th>Véhicule</th><th>Destinataire</th>
         <th style="text-align:right;">Colis</th><th style="text-align:right;">Poids (kg)</th><th style="text-align:right; width:90px;">Pal. Réelles</th>
       </tr>
@@ -659,7 +660,7 @@ function valider() {
   rows.forEach(r => {    
     html += `<div class="recap-line" style="padding:6px 0; border-top: 1.5px dashed #334155; margin-top:6px;">
       <b>[${r.fournisseur}]</b> ${r.client} (${r.ville}) <br>
-      ?? Produit : <span>${r.type_produit}</span> | Statut : <span style="color:#F59E0B;">${r.motif_statut}</span> <br>
+      📦 Produit : <span>${r.type_produit}</span> | Statut : <span style="color:#F59E0B;">${r.motif_statut}</span> <br>
       Palettes : <span>${r.palettes}</span> | Colis : <span>${r.colis}</span> | Poids : <span>${r.poids} kg</span>
     </div>`;  
   });  
@@ -679,12 +680,12 @@ function valider() {
       const badge = recap.querySelector('.badge');
       if (res.status === "success") {
         if (badge) {      
-          badge.textContent = "Enregistré dans le Sheets ?";      
+          badge.textContent = "Enregistré dans le Sheets ✅";      
           badge.style.background = "#22C55E";      
         }
       } else {
         if (badge) {
-          badge.textContent = "Erreur de transmission ?";
+          badge.textContent = "Erreur de transmission ❌";
           badge.style.background = "#EF4444";
         }
         alert("Erreur retournée par le script : " + res.message);
@@ -693,7 +694,7 @@ function valider() {
     .withFailureHandler(function(err) {
       const badge = recap.querySelector('.badge');
       if (badge) {
-        badge.textContent = "Erreur réseau ?";
+        badge.textContent = "Erreur réseau ❌";
         badge.style.background = "#EF4444";
       }
       alert("Erreur critique : " + err);
@@ -940,17 +941,17 @@ function renderCards(list){
       <div class="card-head">
         <span class="lib">${t.libelle}</span>
         <span class="code">${t.code}</span>
-        <span class="chevron">${isOpen ? '?' : '?'}</span>
+        <span class="chevron">${isOpen ? '▼' : '▶'}</span>
       </div>
       <div class="card-driver">
-        <span>?? ${t.conducteur}</span>
-        <span class="veh-field">?? <input type="text" class="veh-input" placeholder="N° véhicule" value="${escapeAttr(getVehicule(t.code))}"></span>
+        <span>👤 ${t.conducteur}</span>
+        <span class="veh-field">🚚 <input type="text" class="veh-input" placeholder="N° véhicule" value="${escapeAttr(getVehicule(t.code))}"></span>
         <span>${t.destinataires.length} destinataire(s)</span>
       </div>
       <div class="card-totals">
-        <span>?? ${colis.toLocaleString('fr-FR')} colis</span>
-        <span>?? ${poids.toLocaleString('fr-FR')} kg</span>
-        ${pal ? `<span>?? ${pal} pal.</span>` : ''}
+        <span>📦 ${colis.toLocaleString('fr-FR')} colis</span>
+        <span>⚖️ ${poids.toLocaleString('fr-FR')} kg</span>
+        ${pal ? `<span>🧱 ${pal} pal.</span>` : ''}
       </div>
       ${isOpen ? `
       <div class="card-body">
@@ -1057,7 +1058,7 @@ function renderPlanning(list){
       <div class="plan-head">${t.libelle}<span class="plan-code">${t.code}</span></div>
       <div class="plan-driver">
         <span class="plan-driver-code">${t.conducteur}</span>
-        ${getVehicule(t.code) ? `<span class="plan-vehicule">?? ${getVehicule(t.code)}</span>` : ''}
+        ${getVehicule(t.code) ? `<span class="plan-vehicule">🚚 ${getVehicule(t.code)}</span>` : ''}
       </div>
       <div class="plan-list">
         ${t.destinataires.length
@@ -1364,7 +1365,7 @@ function generateLabelsFile() {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Import bordereau ? Étiquettes palettes - Delanchy</title>
+<title>Import bordereau — Étiquettes palettes - Delanchy</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"><\/script>
 <style>
 :root { --color-delanchy-blue: #0A3663; --color-delanchy-light: #EBF3FC; --color-text-primary: #1C2D42; --color-text-secondary: #5F738C; --color-border-tertiary: #D2DFEE; --border-radius-lg: 12px; --border-radius-md: 8px; }
@@ -1427,7 +1428,7 @@ tr.excluded { opacity: 0.35; }
 <div class="wrap">
   <div class="header-container no-print">
     <div class="header-text">
-      <h1>Import bordereau ? Étiquettes</h1>
+      <h1>Import bordereau — Étiquettes</h1>
       <p>Généré automatiquement depuis le récap des tournées</p>
     </div>
   </div>
@@ -1446,7 +1447,7 @@ tr.excluded { opacity: 0.35; }
     <button class="btn-submit" style="margin-top:16px;" onclick="genererEtiquettes()">Générer les étiquettes QR</button>
   </div>
   <div id="labels-output"></div>
-  <button class="btn-print no-print" id="btn-imprimer" style="display:none;" onclick="window.print()">??? Imprimer les étiquettes</button>
+  <button class="btn-print no-print" id="btn-imprimer" style="display:none;" onclick="window.print()">🖨️ Imprimer les étiquettes</button>
 </div>
 <script>
 let extractedRows = ${JSON.stringify(rowsForLabels)};
@@ -1523,7 +1524,7 @@ document.getElementById('toggleAllBtn').addEventListener('click', () => {
     expandedCodes.clear();
   }
   renderCards(lastList);
-  document.getElementById('toggleAllBtn').textContent = expandedCodes.size === 0 ? '?? Tout déplier' : '?? Tout replier';
+  document.getElementById('toggleAllBtn').textContent = expandedCodes.size === 0 ? '🔽 Tout déplier' : '🔼 Tout replier';
 });
 
 document.querySelectorAll('.tab').forEach(btn => {
