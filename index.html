@@ -474,6 +474,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
 </div>
 
 <script>
+// URL de deploiement du Web App Apps Script (code.gs) -- a verifier/mettre a jour
+// si tu crees un nouveau deploiement (Deployer > Nouveau deploiement).
+const RESTE_A_QUAI_API_URL = "https://script.google.com/macros/s/AKfycbz1lH0J-xVixB3zGQXHmD3JU4ochdwa77n1chH7BfLHXBOe7WtYqFqSu6GwXT7sCEp14g/exec";
+
 function switchApp(name){
   document.querySelectorAll('.app-view').forEach(el => el.classList.remove('active'));
   document.querySelectorAll('.app-tab-btn').forEach(el => el.classList.remove('active'));
@@ -674,14 +678,21 @@ function valider() {
   recap.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
   const payload = { date: date, tournee: tournee, rows: rows };
-  
-  google.script.run
-    .withSuccessHandler(function(res) {
+
+  // Content-Type "text/plain" volontaire : evite le preflight CORS (OPTIONS) que
+  // les Web Apps Apps Script ne savent pas gerer. code.gs parse quand meme le JSON.
+  fetch(RESTE_A_QUAI_API_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    body: JSON.stringify(payload)
+  })
+    .then(res => res.json())
+    .then(function(res) {
       const badge = recap.querySelector('.badge');
       if (res.status === "success") {
-        if (badge) {      
-          badge.textContent = "Enregistré dans le Sheets ✅";      
-          badge.style.background = "#22C55E";      
+        if (badge) {
+          badge.textContent = "Enregistré dans le Sheets ✅";
+          badge.style.background = "#22C55E";
         }
       } else {
         if (badge) {
@@ -691,15 +702,14 @@ function valider() {
         alert("Erreur retournée par le script : " + res.message);
       }
     })
-    .withFailureHandler(function(err) {
+    .catch(function(err) {
       const badge = recap.querySelector('.badge');
       if (badge) {
         badge.textContent = "Erreur réseau ❌";
         badge.style.background = "#EF4444";
       }
       alert("Erreur critique : " + err);
-    })
-    .enregistrerDonnees(payload);
+    });
 }
 
 function exportCSV() {  
